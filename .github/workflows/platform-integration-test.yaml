@@ -128,6 +128,7 @@ jobs:
         run: |
           export PATH=$PATH:$(go env GOPATH)/bin
           otdfctl encrypt -o secret.txt.tdf --host http://localhost:8080 --tls-no-verify --with-client-creds-file creds.json secret.txt
+          ls -la
         shell: bash
 
       - name: Run tests from a script
